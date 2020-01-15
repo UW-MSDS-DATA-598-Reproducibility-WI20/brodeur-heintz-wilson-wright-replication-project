@@ -1,2 +1,15 @@
-# data598a-winter2020-finalproject
-Final project for Data 598 A during Winter Quarter 2020 at the University of Washington
+# Replication project final submission
+## University of Washington: Data 598 A
+### Ben Brodeur Mathieu, Lauren Heintz, Will Wright and Tara Wilson
+
+This repository will contain our work for the course final project. The goal is to create a replication of a published scientific paper. With an emphasis on reproducible data science, this repository will track our group's progress as we complete the project. More details will be added here as we progress through the quarter.
+
+There are 5 check-ins:
+
+| Project Check-in   | Goal      |
+|:------------------:|-----------|
+| 1 | Group formation, identification of target paper and its scientific claims, and the key figures to focus on for replication |
+| 2 | Identification of data, tools and infrastructure necessary |
+| 3 | Replication of the key figures |
+| 4 | Peer review |
+| 5 | In class presentation |
