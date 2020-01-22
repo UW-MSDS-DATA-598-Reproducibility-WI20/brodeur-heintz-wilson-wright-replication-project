@@ -16,6 +16,10 @@ There are 5 check-ins:
 
 ## Check In 2
 
+#### Versioning
+
+R Version:
+
 | R Packages Used   | Version      |
 |:------------------:|-----------|
 | car | Version No |
@@ -29,3 +33,6 @@ There are 5 check-ins:
 |:------------------:|-----------|
 | Lauren Heintz |  MacOS Mojave 10.14.6 |
 | Will | Version No |
+| Tara Wilson | Windows 10 Home 1903 x64 |
+
+#### Data availability
