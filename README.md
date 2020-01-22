@@ -33,6 +33,7 @@ R Version: 3.5.0?
 | xtable | Version No |
 
 Other dependencies:
+
 | R Package Name | Version |
 |:--------------:|---------|
 | package x | x.x.x |
