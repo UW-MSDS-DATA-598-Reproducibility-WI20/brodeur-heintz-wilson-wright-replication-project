@@ -14,6 +14,10 @@ There are 5 check-ins:
 | 4 | Peer review |
 | 5 | In class presentation |
 
+*Paper:* [Marriage and happiness: Providing evidence against a relationship between inequality and happiness](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/25655)
+
+
+
 ## Check In 2
 
 #### Versioning
