@@ -14,17 +14,17 @@ There are 5 check-ins:
 | 4 | Peer review |
 | 5 | In class presentation |
 
-*Paper:* [Marriage and happiness: Providing evidence against a relationship between inequality and happiness](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/25655)
+**Paper:** [Marriage and happiness: Providing evidence against a relationship between inequality and happiness](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/25655)
 
-
+**Citation:** Grunberg, Rebecca L. (Sloan School Of Management, MIT); Kim, Hyejun (Sloan School Of Management, MIT); Kim, Minjae (Sloan School Of Management, MIT). (2014). Marriage and happiness Grunberg Kim Kim.pdf [Data set]. Harvard Dataverse. https://doi.org/10.7910/DVN/25655/MB980L
 
 ## Check In 2
 
 #### Versioning
 
-R Version:
+R Version: 3.5.0?
 
-| R Packages Used   | Version      |
+| R Packages Required   | Version      |
 |:------------------:|-----------|
 | car | Version No |
 | Hmisc | Version No |
@@ -32,11 +32,18 @@ R Version:
 | lme4 | Version No |
 | xtable | Version No |
 
+Other dependencies:
+| R Package Name | Version |
+|:--------------:|---------|
+| package x | x.x.x |
 
 | Team Member   | OS/Version      |
 |:------------------:|-----------|
 | Lauren Heintz |  MacOS Mojave 10.14.6 |
-| Will | Version No |
+| Will Wright | ? |
 | Tara Wilson | Windows 10 Home 1903 x64 |
+| Ben Brodeur Mathieu | ? |
 
 #### Data availability
+
+The data is available through Harvard Dataverse. The data for `Gini_families.csv` is available [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EHOQ1O&version=1.0). The remaining data from `sub-date.txt` is available for download [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EVUXXU&version=1.0).
