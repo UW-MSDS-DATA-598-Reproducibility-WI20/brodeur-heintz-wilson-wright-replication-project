@@ -18,8 +18,11 @@ There are 5 check-ins:
 
 | R Packages Used   | Version      |
 |:------------------:|-----------|
-| Package 1 | Version No |
-| Package 2 | Version No |
+| car | Version No |
+| Hmisc | Version No |
+| Matrix | Version No |
+| lme4 | Version No |
+| xtable | Version No |
 
 
 | Team Member   | OS/Version      |
