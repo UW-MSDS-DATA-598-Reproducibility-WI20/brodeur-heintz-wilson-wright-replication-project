@@ -22,29 +22,53 @@ There are 5 check-ins:
 
 #### Versioning
 
-R Version: 3.5.0?
 
-| R Packages Required   | Version      |
-|:------------------:|-----------|
-| car | Version No |
-| Hmisc | Version No |
-| Matrix | Version No |
-| lme4 | Version No |
-| xtable | Version No |
+| Team Member   | OS/Version      | R Version |
+|:------------------:|-----------|-----|
+| Lauren Heintz |  MacOS Mojave 10.14.6 | 3.6.1 |
+| Will Wright | ? | 3.X.X |
+| Tara Wilson | Windows 10 Home 1903 x64 | 3.X.X 3.5.0 ?|
+| Ben Brodeur Mathieu | ? | 3.X.X |
 
-Other dependencies:
+| R Packages Explicitly Required   |
+|:------------------:|
+| car | 
+| Hmisc | 
+| Matrix | 
+| lme4 | 
+| xtable | 
+
+In the process of installed the listed packages above, other dependencies emerged. Here is the list of packages and their versions ultimately installed.
 
 | R Package Name | Version |
 |:--------------:|---------|
-| package x | x.x.x |
+|  car   | 3.0_2 |
+|  lme4   | 1.1_21 |
+|  matrixmodels  | 0.4_1|
+|  hmisc   | 4.2_0  |
+|  xtable  | 1.8_4|
+| abind | 1.4_5 |
+| cardata | 3.0_2 |
+| maptools | 0.9_5 |
+| minqa | 1.2.4  |
+| nloptr | 1.2.1 | 
+| openxlsx | 4.1.0 |
+| pbkrtest | 0.4_7 |
+| quantreg | 5.38  |
+| rcppeigen | 0.3.3.5.0 |
+| rio | 0.5.16  |
+| sp | 1.3_1 |
+| sparsem | 1.77  |
+| zip | 2.0.1 |
+| acepack| 1.4.1   |
+| checkmate | 1.9.1 |
+| formula | 1.2_3 |
+| gridextra | 2.3  |
+| htmltable | 1.13.1 |
+| latticeextra | 0.6_28 |
+| viridis | 0.5.1 |
 
-| Team Member   | OS/Version      |
-|:------------------:|-----------|
-| Lauren Heintz |  MacOS Mojave 10.14.6 |
-| Will Wright | ? |
-| Tara Wilson | Windows 10 Home 1903 x64 |
-| Ben Brodeur Mathieu | ? |
 
 #### Data availability
 
-The data is available through Harvard Dataverse. The data for `Gini_families.csv` is available [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EHOQ1O&version=1.0). The remaining data from `sub-date.txt` is available for download [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EVUXXU&version=1.0).
+The data is available through Harvard Dataverse. The data for `Gini_families.csv` is available [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EHOQ1O&version=1.0). The remaining data from `sub-data.txt` is available for download [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EVUXXU&version=1.0).
