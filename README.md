@@ -13,3 +13,16 @@ There are 5 check-ins:
 | 3 | Replication of the key figures |
 | 4 | Peer review |
 | 5 | In class presentation |
+
+## Check In 2
+
+| R Packages Used   | Version      |
+|:------------------:|-----------|
+| Package 1 | Version No |
+| Package 2 | Version No |
+
+
+| Team Member   | OS/Version      |
+|:------------------:|-----------|
+| Lauren Heintz |  MacOS Mojave 10.14.6 |
+| Will | Version No |
