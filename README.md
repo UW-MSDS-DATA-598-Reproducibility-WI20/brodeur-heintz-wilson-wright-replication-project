@@ -1,28 +1,35 @@
 # Replication of Marriage and happiness: Providing evidence against a relationship between inequality and happiness
 
-## Replication project final submission
-## University of Washington: Data 598 A
+ Replication project final submission
+ University of Washington: Data 598 A
 
-### Contributors
+## Contributors
 
-| Team Member   | ORCiD Badge   | OS/Version      | R Version |
-|:-------------:|---------------|-----------------|-----------|
-| [Lauren Heintz](https://github.com/lheintz) | ? | MacOS Mojave 10.14.6 | 3.6.1 |
-| [Will Wright](https://github.com/WrightWillT)   | ? | ? | 3.X.X |
-| [Tara Wilson](https://github.com/TaraWilson17)   | [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3150-3164)  | Windows 10 Home 1903 x64 | 3.X.X 3.5.0 ?|
-| [Ben Brodeur Mathieu](https://github.com/ALotOfData) | ? | ? | 3.?.? |
+[Lauren Heintz](https://github.com/lheintz) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)
+[Will Wright](https://github.com/WrightWillT) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)
+[Tara Wilson](https://github.com/TaraWilson17) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3150-3164)
+[Ben Brodeur Mathieu](https://github.com/ALotOfData) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)
 
-### Contents
+## Contents
+
+The purpose of this assignment is to explore the emphasis on reproducibility in scientific research. We will be creating a replication of the 2014 paper, *Marriage and happiness: Providing evidence against a relationship between inequality and happiness*. This paper challenges claims about American happiness, and looks into factors that have known happiness drivers to change over time. They look into factors such as race and marriage, and explain how accounting for this information removes the claimed relationship between inequality and happiness. Specifically, our team will be replicating Table 2, a look into demographic and happiness, and Figure 2, a linear investigation of mean happiness and the proportion of the population that is married and white. Since this paper challenges previous claims on the grounds of data control, it is a prime candidate for a meaningful reproduction.
 
 **Paper:** [Marriage and happiness: Providing evidence against a relationship between inequality and happiness](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/25655)
 
 **Citation:** Grunberg, Rebecca L. (Sloan School Of Management, MIT); Kim, Hyejun (Sloan School Of Management, MIT); Kim, Minjae (Sloan School Of Management, MIT). (2014). Marriage and happiness Grunberg Kim Kim.pdf [Data set]. Harvard Dataverse. https://doi.org/10.7910/DVN/25655/MB980L
 
-### Data
+## Data
 
 The data is available through Harvard Dataverse. The data for `Gini_families.csv` is available [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EHOQ1O&version=1.0). The remaining data from `sub-data.txt` is available for download [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EVUXXU&version=1.0).
 
-### Dependencies
+## Dependencies
+
+| Team Member   | OS/Version      | R Version |
+|:-------------:|-----------------|-----------|
+| Lauren Heintz | MacOS Mojave 10.14.6 | 3.6.1 |
+| Will Wright   | ? | 3.?.? |
+| Tara Wilson   | Windows 10 Home 1903 x64 | 3.3.0, 3.5.0, 3.5.3, 3.6.2 |
+| Ben Brodeur Mathieu | ? | 3.?.? |
 
 | R Packages Explicitly Required   |
 |:------------------:|
