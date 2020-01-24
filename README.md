@@ -1,34 +1,28 @@
-# Replication project final submission
+# Replication of Marriage and happiness: Providing evidence against a relationship between inequality and happiness
+
+## Replication project final submission
 ## University of Washington: Data 598 A
-### Ben Brodeur Mathieu, Lauren Heintz, Will Wright and Tara Wilson
 
-This repository will contain our work for the course final project. The goal is to create a replication of a published scientific paper. With an emphasis on reproducible data science, this repository will track our group's progress as we complete the project. More details will be added here as we progress through the quarter.
+### Contributors
 
-There are 5 check-ins:
+| Team Member   | ORCiD Badge   | OS/Version      | R Version |
+|:-------------:|---------------|-----------------|-----------|
+| [Lauren Heintz](https://github.com/lheintz) | ? | MacOS Mojave 10.14.6 | 3.6.1 |
+| [Will Wright](https://github.com/WrightWillT)   | ? | ? | 3.X.X |
+| [Tara Wilson](https://github.com/TaraWilson17)   | [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3150-3164)  | Windows 10 Home 1903 x64 | 3.X.X 3.5.0 ?|
+| [Ben Brodeur Mathieu](https://github.com/ALotOfData) | ? | ? | 3.?.? |
 
-| Project Check-in   | Goal      |
-|:------------------:|-----------|
-| 1 | Group formation, identification of target paper and its scientific claims, and the key figures to focus on for replication |
-| 2 | Identification of data, tools and infrastructure necessary |
-| 3 | Replication of the key figures |
-| 4 | Peer review |
-| 5 | In class presentation |
+### Contents
 
 **Paper:** [Marriage and happiness: Providing evidence against a relationship between inequality and happiness](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/25655)
 
 **Citation:** Grunberg, Rebecca L. (Sloan School Of Management, MIT); Kim, Hyejun (Sloan School Of Management, MIT); Kim, Minjae (Sloan School Of Management, MIT). (2014). Marriage and happiness Grunberg Kim Kim.pdf [Data set]. Harvard Dataverse. https://doi.org/10.7910/DVN/25655/MB980L
 
-## Check In 2
+### Data
 
-#### Versioning
+The data is available through Harvard Dataverse. The data for `Gini_families.csv` is available [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EHOQ1O&version=1.0). The remaining data from `sub-data.txt` is available for download [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EVUXXU&version=1.0).
 
-
-| Team Member   | OS/Version      | R Version |
-|:------------------:|-----------|-----|
-| Lauren Heintz |  MacOS Mojave 10.14.6 | 3.6.1 |
-| Will Wright | ? | 3.X.X |
-| Tara Wilson | Windows 10 Home 1903 x64 | 3.X.X 3.5.0 ?|
-| Ben Brodeur Mathieu | ? | 3.X.X |
+### Dependencies
 
 | R Packages Explicitly Required   |
 |:------------------:|
@@ -67,8 +61,3 @@ In the process of installed the listed packages above, other dependencies emerge
 | htmltable | 1.13.1 |
 | latticeextra | 0.6_28 |
 | viridis | 0.5.1 |
-
-
-#### Data availability
-
-The data is available through Harvard Dataverse. The data for `Gini_families.csv` is available [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EHOQ1O&version=1.0). The remaining data from `sub-data.txt` is available for download [here](https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/EVUXXU&version=1.0).
