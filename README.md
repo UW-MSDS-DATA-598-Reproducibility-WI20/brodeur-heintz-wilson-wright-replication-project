@@ -5,10 +5,10 @@
 
 ## Contributors
 
-[Lauren Heintz](https://github.com/lheintz) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)
-[Will Wright](https://github.com/WrightWillT) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)
-[Tara Wilson](https://github.com/TaraWilson17) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3150-3164)
-[Ben Brodeur Mathieu](https://github.com/ALotOfData) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)
+[Lauren Heintz](https://github.com/lheintz) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)  
+[Will Wright](https://github.com/WrightWillT) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)  
+[Tara Wilson](https://github.com/TaraWilson17) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3150-3164)  
+[Ben Brodeur Mathieu](https://github.com/ALotOfData) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)  
 
 ## Contents
 
@@ -31,13 +31,12 @@ The data is available through Harvard Dataverse. The data for `Gini_families.csv
 | Tara Wilson   | Windows 10 Home 1903 x64 | 3.3.0, 3.5.0, 3.5.3, 3.6.2 |
 | Ben Brodeur Mathieu | ? | 3.?.? |
 
-| R Packages Explicitly Required   |
-|:------------------:|
-| car | 
-| Hmisc | 
-| Matrix | 
-| lme4 | 
-| xtable | 
+R Packages Explicitly Required:
+* car
+* Hmisc
+* Matrix
+* lme4
+* xtable
 
 In the process of installed the listed packages above, other dependencies emerged. Here is the list of packages and their versions ultimately installed.
 
