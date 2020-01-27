@@ -6,7 +6,7 @@
 ## Contributors
 
 [Lauren Heintz](https://github.com/lheintz) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-2834-2112)  
-[Will Wright](https://github.com/WrightWillT) [![(https://orcid.org/sites/default/files/images/orcid_16x16.png)](put orcid here)  
+[Will Wright](https://github.com/WrightWillT) [![(https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-1264-4105)  
 [Tara Wilson](https://github.com/TaraWilson17) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3150-3164)  
 [Ben Brodeur Mathieu](https://github.com/ALotOfData) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-6464-9747)  
 
@@ -27,7 +27,7 @@ The data is available through Harvard Dataverse. The data for `Gini_families.csv
 |     Team Member     | OS/Version               | R Version                  |
 | :-----------------: | ------------------------ | -------------------------- |
 |    Lauren Heintz    | MacOS Mojave 10.14.6     | 3.6.1                      |
-|     Will Wright     | ?                        | 3.?.?                      |
+|     Will Wright     | MasOS Catalina 10.15.1 	| 3.6.2                      |
 |     Tara Wilson     | Windows 10 Home 1903 x64 | 3.3.0, 3.5.0, 3.5.3, 3.6.2 |
 | Ben Brodeur Mathieu | MacOS Catalina 10.15.2   | 3.6.2                      |
 
