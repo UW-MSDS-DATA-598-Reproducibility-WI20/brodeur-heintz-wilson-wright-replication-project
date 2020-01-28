@@ -67,3 +67,7 @@ In the process of installed the listed packages above, other dependencies emerge
 | htmltable | 1.13.1 |
 | latticeextra | 0.6_28 |
 | viridis | 0.5.1 |
+
+## [Contributing](CONTRIBUTING.md)
+
+## [Code of Conduct](CODE_OF_CONDUCT.md)
