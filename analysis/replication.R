@@ -6,7 +6,6 @@
 ## Replication data available at Harvard Dataverse ##
 
 rm(list=ls())
-setwd("~/Documents/Spring 14 Classes/gov 2001/Replication paper")
 require(car)
 require(Hmisc)
 require(Matrix)
@@ -14,8 +13,8 @@ require(lme4)
 library(xtable)
 
 # load the data
-Gini = read.csv("Gini_families.csv")
-happy = read.table("sub-data.txt", header=T, sep=",")
+Gini = read.csv("../data/Gini_families.csv")
+happy = read.table("../data/sub-data.txt", header=T, sep=",")
 names(happy)[6] = "Year"
 happy = merge(happy, Gini, by="Year")
 
