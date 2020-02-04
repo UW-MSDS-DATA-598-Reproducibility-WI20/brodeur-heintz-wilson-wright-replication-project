@@ -11,6 +11,7 @@ require(Hmisc)
 require(Matrix)
 require(lme4)
 library(xtable)
+require(stargazer)
 
 # load the data
 Gini = read.csv("../data/Gini_families.csv")
@@ -23,10 +24,10 @@ happy$Happiness = recode(happy$HAPPY, "1=3; 3=1; c(0,8,9)=NA")
 happy$TRUSTrecode = recode(happy$TRUST, "1=3; 2=1; 3=2; c(0,8,9)=NA")
 happy$FAIRrecode = recode(happy$FAIR, "2=3; 3=2; c(0,8,9)=NA")
 happy$Age = recode(happy$AGE, "c(9)=NA")
-happy$REALINCrecode = recode(happy$REALINC, "0=NA")
-happy$REALINClog = log(happy$REALINCrecode)
-happy$White = as.numeric(happy$RACE==1)
-happy$Married = as.numeric(happy$MARITAL==1)
+#happy$REALINCrecode = recode(happy$REALINC, "0=NA")
+#happy$REALINClog = log(happy$REALINCrecode)
+happy$White = as.numeric(happy$NATRACE==1)
+#happy$Married = as.numeric(happy$MARITAL==1)
 happy$Gini = happy$Total
 
 # create two data sets, one for original data used in the paper (through 2008)
@@ -211,3 +212,4 @@ text(plotdata$Total, plotdata$Happiness, labels=plotdata$Year, adj=c(.4, -.5), c
 mtext("Fig. 2. Scatter plot (with best-fitting regression line) showing mean American happiness scores as a
       function of income inequality, as indexed by the Gini coefficient, from 1972 to 2008", 1, 4.25, cex = .6)
 dev.off()
+
