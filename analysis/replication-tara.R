@@ -11,11 +11,12 @@ require(Hmisc)
 require(Matrix)
 require(lme4)
 library(xtable)
+require(stargazer)
 
 # load the data
 Gini = read.csv("../data/Gini_families.csv")
 happy = read.table("../data/sub-data.txt", header=T, sep=",")
-names(happy)[6] = "Year"
+names(happy)[5] = "Year"
 happy = merge(happy, Gini, by="Year")
 
 # recode the GSS variables
@@ -25,8 +26,8 @@ happy$FAIRrecode = recode(happy$FAIR, "2=3; 3=2; c(0,8,9)=NA")
 happy$Age = recode(happy$AGE, "c(9)=NA")
 happy$REALINCrecode = recode(happy$REALINC, "0=NA")
 happy$REALINClog = log(happy$REALINCrecode)
-happy$White = as.numeric(happy$RACE==1)
-happy$Married = as.numeric(happy$MARITAL==1)
+happy$White = as.numeric(happy$NATRACE==1)
+#happy$Married = as.numeric(happy$MARITAL==1)
 happy$Gini = happy$Total
 
 # create two data sets, one for original data used in the paper (through 2008)
@@ -38,6 +39,12 @@ fullData = happy
 m1 = lmer(Happiness ~ Gini + (1 | Year), data=origData)
 summary(m1)
 ci.m1 = confint(m1)
+
+#### RESPONDENT'S RACE ####
+# race is correlated with happiness, see correlation table
+# AND there are significant shifts in race, see figure of demographic trends
+#### Figures 2 and 3. plot of proportion white x mean happiness, happiness of racial groups
+happyByYear = aggregate(Happiness ~ Year, FUN=mean, data=origData)
 
 #### Figure 1. Pattern over time of inequality, race, marital status
 png(file='Figure1.png', units='in', width=11, height=8.5, res=400)
@@ -53,6 +60,8 @@ raceByYear = aggregate(White ~ Year, FUN=mean, data=fullData)
 plot(happyByYear$Year, raceByYear$White, type="o", pch=20, xlab="Year",
      ylab="Proportion White Respondents", xaxt="n", ylim=c(.65, .95))
 axis(1, at=seq(1947,2012,by=5),labels=seq(1947,2012,by=5))
+
+raceByYear = merge(raceByYear, happyByYear, by="Year")
 
 #marital status
 marByYear = aggregate(Married ~ Year, FUN=mean, data=fullData)
@@ -106,13 +115,6 @@ legend("bottomleft", legend=c("Men", "Women"), col=c("blue", "forestgreen"), lty
 # but including sex as a control, same effect of Gini
 m4 = lmer(Happiness ~ Gini + factor(SEX) + (1 | Year), data=origData)
 m4.ci = confint(m4)
-
-#### RESPONDENT'S RACE ####
-# race is correlated with happiness, see correlation table
-# AND there are significant shifts in race, see figure of demographic trends
-#### Figures 2 and 3. plot of proportion white x mean happiness, happiness of racial groups
-happybyYear = aggregate(Happiness ~ Year, FUN=mean, data=origData)
-raceByYear = merge(raceByYear, happybyYear, by="Year")
 
 png(file='Figure2.png', units='in', width=11, height=8.5, res=400)
 plot(raceByYear$White, raceByYear$Happiness, pch = 20, las=1, xlim=rev(range(raceByYear$White)),
@@ -211,3 +213,4 @@ text(plotdata$Total, plotdata$Happiness, labels=plotdata$Year, adj=c(.4, -.5), c
 mtext("Fig. 2. Scatter plot (with best-fitting regression line) showing mean American happiness scores as a
       function of income inequality, as indexed by the Gini coefficient, from 1972 to 2008", 1, 4.25, cex = .6)
 dev.off()
+
