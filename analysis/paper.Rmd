@@ -19,6 +19,16 @@ knitr::opts_chunk$set(
 #knitr::read_chunk("src/my-external-code.R")
 ```
 
+A reference implementation of:
+
+> Grunberg, Rebecca L., Hyejun Kim, and Minjae Kim. 2014a. “Marriage and Happiness Grunberg Kim Kim.pdf.” Harvard Dataverse. https://doi.org/10.7910/DVN/25655/MB980L
+
+Which is a reference implementation of:
+
+> Oishi, S., Kesebir, S., & Diener, E. (2011). Income Inequality and Happiness. Psychological Science, 22(9), 1095–1100. https://doi.org/10.1177/0956797611417262
+
+
+
 # Introduction
 
 
@@ -46,6 +56,7 @@ myfunction(32,44)
 
 Reference 1: @marriagehappiness  
 Reference 2: @data
+Reference 3: @incomeinequality
 
 ---
 
