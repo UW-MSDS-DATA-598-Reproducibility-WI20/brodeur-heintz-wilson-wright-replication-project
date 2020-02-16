@@ -1,5 +1,5 @@
 ---
-title: "[Re] Marriage and happiness: Oishi, Kesebir, and Diener (2011)"
+title: "[Re] Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)"
 author: "Lauren Heintz, Tara Wilson, Ben Mathieu, Will Wright"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: bookdown::word_document2
@@ -22,8 +22,19 @@ knitr::opts_chunk$set(
 # Introduction
 
 
+
 # Methods
 
+```{r, echo = FALSE}
+
+myfunction <- function(arg1, arg2){
+  print(seq(arg2))
+  print("hello world")
+}
+
+myfunction(32,44)
+
+```
 
 # Results
 
@@ -31,7 +42,7 @@ knitr::opts_chunk$set(
 # Conclusion
 
 
-# References
+# References Cited
 
 Reference 1: @marriagehappiness  
 Reference 2: @data
