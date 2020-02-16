@@ -10,15 +10,25 @@ title: "[Re] Marriage and happiness: Providing evidence against a relationship b
 # List of authors with name, orcid number, email and affiliation
 # Affiliation "*" means contact author
 authors:
-  - name: Konrad Hinsen
-    orcid: 0000-0003-0330-9428
-    email: konrad.hinsen@cnrs.fr
-    affiliations: 1,2
+  - name: Lauren Heintz
+    orcid: 0000-0002-2834-2112
+    email: heintzl@uw.edu
+    affiliations: 1
     
-  - name: Nicolas P. Rougier
-    orcid: 0000-0002-6972-589X
-    email: Nicolas.Rougier@inria.fr
-    affiliations: 3,4,5,*      # * is for contact author
+  - name: Will Wright
+    orcid: 0000-0003-1264-4105
+    email: wtwright@uw.edu
+    affiliations: 1 
+
+  - name: Tara Wilson
+    orcid: 0000-0003-3150-3164
+    email: wwtara@uw.edu
+    affiliations: 1  
+
+  - name: Ben Brodeur Mathieu
+  orcid: 0000-0001-6464-9747
+  email: bebrodeu@uw.edu
+  affiliations: 1 
 
 # List of affiliations with code (corresponding to author affiliations), name
 # and address. You can also use these affiliations to add text such as "Equal
@@ -38,21 +48,21 @@ keywords: rescience c, rescience x, R, marriage, happiness
 # Software Heritage.
 #   see https://guides.github.com/activities/citable-code/
 code:
-  - url: https://github.com/rescience-c/template
+  - url: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/wilson-heintz-wright-brodeur-replication-project
   - doi: 
   - swh: 
 
 # Data URL and DOI (optional if no data)
 data:
-  - url:
-  - doi:
+  - url: https://doi.org/10.7910/DVN/25655
+  - doi: 10.7910/DVN/25655
 
 # Information about the original article that has been replicated
 replication:
- - cite: # Full textual citation
- - bib:  # Bibtex key (if any) in your bibliography file
- - url:  # URL to the PDF, try to link to a non-paywall version
- - doi:  # Regular digital object identifier
+ - cite: Grunberg, Rebecca L., Hyejun Kim, and Minjae Kim. 2014a. “Marriage and Happiness Grunberg Kim Kim.pdf.” Harvard Dataverse. https://doi.org/10.7910/DVN/25655/MB980L. # Full textual citation
+ - bib: marriagehappiness # Bibtex key (if any) in your bibliography file
+ - url: https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/MB980L# # URL to the PDF, try to link to a non-paywall version
+ - doi: 10.7910/DVN/25655/MB980L # Regular digital object identifier
 
 # Don't forget to surround abstract with double quotes
 abstract: "Three years have passed since ReScience published its first article
@@ -78,10 +88,10 @@ type: Editorial
 
 # Scientific domain of the article (e.g. Computational Neuroscience)
 #  (one domain only & try to be not overly specific)
-domain: 
+domain: Pyschological Science
 
 # Coding language (main one only if several)
-language:
+language: R
 
   
 # To be filled by the author(s) after acceptance
