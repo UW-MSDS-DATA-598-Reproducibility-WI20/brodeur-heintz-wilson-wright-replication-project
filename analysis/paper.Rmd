@@ -8,7 +8,7 @@ link-citations: yes
 
 ---
 
-``` {r setup, echo = FALSE}
+``` {r setup, echo = FALSE, message = FALSE, warnings = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   warning = FALSE,
@@ -17,7 +17,68 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "../figures")
 #knitr::read_chunk("src/my-external-code.R")
+
+# load packages
+library(tidyverse)
+library(gssr)
 ```
+
+```{r get_data, echo = FALSE}
+# ==== Get Data
+# The happiness, race, and marital data comes from the gssr package and not the provided data since the provided version
+  # does not have race or marital status. For more information, go to https://kjhealy.github.io/gssr/
+data(gss_all)
+
+# The Gini indices come from the provided dataset
+gini <-  read.csv("../data/Gini_families.csv") %>%
+  select(year = Year, gini = Total)
+
+# ==== Clean data
+# Subset the GSS data to just the relevant fields
+gss <- gss_all %>%
+  select(year, happy, race, marital) %>%
+  mutate(year = as.integer(year), # fix data class
+         happy = as.integer(happy),
+         happy = recode(happy, `1`= 3, `2` = 2, `3` = 1), # reverse the values such that higher is more happy
+         race = as.integer(race),
+         marital = as.integer(marital)) %>%
+  na.omit() # remove NAs (4780/64,814 cases where not all data was collected)
+  
+# join the gini and happiness/race/marital data
+happy <- gini %>%
+  left_join(gss, by = c("year" = "year")) %>%
+  na.omit()
+
+
+# create summary table by year
+happy_race_summary <- happy %>%
+  group_by(year, race) %>%
+  summarize(happy_avg = mean(happy))
+
+# write a function 
+
+```
+
+```{r plots}
+g <- ggplot(happy_race_summary, aes(x = year, y = happy_avg, color = factor(race)))
+g + geom_point() +
+  geom_line(stat = "smooth",
+            method = "lm", 
+            se = FALSE, 
+            alpha = 0.5) +
+  theme_bw() +
+  labs(title = "Figure 3",
+       x = "Year",
+       y = "Mean Happiness",
+       caption = "Figure 3") +
+  scale_color_discrete(name="Race",
+                      breaks=c(1, 2, 3),
+                      labels=c("White", "Black", "Other")) +
+  scale_y_continuous(limits = c(1.9,2.5))
+
+
+```
+
 
 A reference implementation of:
 
