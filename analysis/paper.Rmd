@@ -109,6 +109,18 @@ myfunction(32,44)
 
 # Results
 
+```{r, table1, fig.cap="Table 1 from the original paper", echo=FALSE}
+knitr::include_graphics("original_paper_table_1.png")
+```
+
+The results from Table 1 in the original paper are shown in Figure \@ref(fig:table1).
+
+```{r, table2, fig.cap="Table 2 from the original paper", echo=FALSE}
+knitr::include_graphics("original_paper_table_2.png")
+```
+
+The results from Table 2 in the original paper are shown in Figure \@ref(fig:table2).
+
 
 # Conclusion
 
