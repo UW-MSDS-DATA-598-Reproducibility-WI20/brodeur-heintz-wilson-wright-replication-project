@@ -5,11 +5,8 @@ require(lme4)
 library(xtable)
 library(gssr)
 
-Gini = read.csv("../data/Gini_families.csv")
 data(gss_all)
 happy = gss_all
-happy$Year = happy$year
-happy = merge(happy, Gini, by="Year")
 
 happy$Happiness = recode(happy$happy, "1=3; 3=1; c(0,8,9)=NA")
 happy$TRUSTrecode = recode(happy$trust, "1=3; 2=1; 3=2; c(0,8,9)=NA")
@@ -20,7 +17,7 @@ happy$REALINClog = log(happy$REALINCrecode)
 happy$White = as.numeric(happy$race==1)
 happy$Married = as.numeric(happy$marital==1)
 
-origData = happy[happy$Year<=2008,]
+origData = happy[happy$year<=2008,]
 
 #### Table. Correlation of control variables and reported happiness
 income = cor.test(origData$REALINClog, origData$Happiness)
