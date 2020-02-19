@@ -35,6 +35,20 @@ Which is a reference implementation of:
 
 # Methods
 
+The paper of interest[@data] used linear models to show that the correlations drawn by the original findings[@incomeinequality] do not have an effect on the response variable, happiness, by factoring in interactions of variables known correlated variables.
+
+In this replication paper, three artifacts from the original paper[@data] were reproduced. The first artifact is "figure 2 (ADD FIGURE 2)..." which plots the mean happiness by year and race. The second artifact is table1 which shows the linear regression model's coefficients. The third artifact is table2 which shows the muliti correlation coefficients.
+
+## Dataset
+
+Marriage and Happiness[@data], obtained data from the General Social Survey (GSS) and the US Census Bureau. The subset of GSS data provided omitted the RACE and MARITAL columns crucial to the replication of the figures and models. 
+
+In order to complete the missing data, the original dataset was queried directly using the gssr [add reference here?] R package. This new dataset was then merged with the unchanged US Census Bureau data found in gini_..csv.
+
+## Replicating Figure 2 - [INSER FULL FIGURE NAME HERE]
+
+The original R code used the standard R libaries for visualizations. The da
+
 ```{r, echo = FALSE}
 
 myfunction <- function(arg1, arg2){
@@ -46,11 +60,22 @@ myfunction(32,44)
 
 ```
 
+
+## Replicating Table 1
+
+
+## Replicating Table 2
+
+
 # Results
+
+We obtained ...
+
 
 
 # Conclusion
 
+Replication of this paper was utlimately contingent on tracing back the original dataset. Without this resource being cited and publically available, it would not have been possible to replicate the different tables and figure presented in the original paper.
 
 # References Cited
 
