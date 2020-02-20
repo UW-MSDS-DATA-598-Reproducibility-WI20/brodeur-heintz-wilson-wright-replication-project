@@ -65,16 +65,7 @@ replication:
  - doi: 10.7910/DVN/25655/MB980L # Regular digital object identifier
 
 # Don't forget to surround abstract with double quotes
-abstract: "Three years have passed since ReScience published its first article
-           and since September 2015, things have been going steadily. We're
-           still alive, independent and without a budget. In the meantime, we
-           have published around 20 articles (mostly in computational
-           neuroscience & computational ecology) and the initial has grown
-           from around 10 to roughly 100 members (editors and reviewers), we
-           have advertised ReScience at several conferences worldwide, gave
-           some interviews and we published an article introducing ReScience in
-           PeerJ. Based on our experience at managing the journal during these
-           three years, we think the time is ripe for proposing some changes."
+abstract: "The purpose of the following paper is to do a replication of the paper 'Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)'. There is a crisis of reproducibility and replication in data science field. This paper follows the ReScience method of replicating a research paper to further validate the results of the paper. This particular replication is unique, because the paper being replicated is actually an alternate implementation of another paper, 'Income Inequality and Happiness' [@incomeinequality]. While the first paper draws a connection between happiness and income, the second paper calls in the question the data used for this conclusion, and pulls in additional data for analysis. This second analysis, focused more on marriage and happiness is what this paper seeks to replicate."
 
 # Bibliography file (yours)
 bibliography: bibliography.bib
