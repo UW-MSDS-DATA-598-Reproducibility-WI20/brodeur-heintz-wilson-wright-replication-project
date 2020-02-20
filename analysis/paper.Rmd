@@ -16,7 +16,9 @@ knitr::opts_chunk$set(
   echo = FALSE,
   comment = "#>",
   fig.path = "../figures")
-#knitr::read_chunk("src/my-external-code.R")
+
+knitr::read_chunk("001-creates-table-1.R")
+knitr::read_chunk("002-creates-table-2.R")
 
 # load packages
 library(tidyverse)
@@ -109,11 +111,21 @@ myfunction(32,44)
 
 # Results
 
+```{r import-and-clean-the-data-for-table-1, eval=TRUE}
+```
+
+```{r create-the-correlations-and-table, eval=TRUE}
+```
+
+```{r display-table-1, eval=TRUE, results='asis'}
+```
+
 ```{r, table1, fig.cap="Table 1 from the original paper", echo=FALSE}
 knitr::include_graphics("original_paper_table_1.png")
 ```
 
 The results from Table 1 in the original paper are shown in Figure \@ref(fig:table1).
+
 
 ```{r, table2, fig.cap="Table 2 from the original paper", echo=FALSE}
 knitr::include_graphics("original_paper_table_2.png")
