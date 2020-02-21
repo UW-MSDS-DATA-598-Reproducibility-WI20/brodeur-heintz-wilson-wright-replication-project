@@ -3,9 +3,9 @@
   require(Hmisc)
   require(Matrix)
   require(lme4)
-  library(xtable)
   library(gssr)
-  
+  library(xtable)
+
   data(gss_all)
   happy = gss_all
   
@@ -34,4 +34,4 @@
   rownames(table1) = c("Logged Income", "Age", "Sex", "White", "Married")
   
 # ---- display-table-1
-  print(xtable(x=table1), type="latex", comment=FALSE)
+  print(xtable(x=table1), type="html", comment=FALSE)
