@@ -125,14 +125,23 @@ myfunction(32,44)
 knitr::include_graphics("original_paper_table_1.png")
 ```
 
-The results from Table 1 in the original paper are shown in Figure \@ref(fig:table1).
+We were table to almost exactly reproduce the results from Table 1 in the original paper that shown in Figure \@ref(fig:table1). The only difference is the estimate for Sex was 0.01 in the publication compared to 0.00 in our replication. This may be due to rounding versions or an underlying exclusion of outliers we saw with the above plot.
 
+
+```{r import-and-clean-the-data-for-table-2, eval=TRUE}
+```
+
+```{r run-the-regressions, eval=TRUE}
+```
+
+```{r display-table-2, eval=TRUE, results='asis'}
+```
 
 ```{r, table2, fig.cap="Table 2 from the original paper", echo=FALSE}
 knitr::include_graphics("original_paper_table_2.png")
 ```
 
-The results from Table 2 in the original paper are shown in Figure \@ref(fig:table2).
+Again we were able to almost identically reproduce the results from Table 2 in the original paper, shown in Figure \@ref(fig:table2). Aside from slight variability in the second and third decimal places, our results from the linear models are very close. There are several differences wit the number of observations, listed in the bottom of the table, which is to be expected as we are using a package with the GSS data and it is likely not an identical snapshot to the one used in the original paper. Overall though these two tables were indeed highly reproducible even with different input data.
 
 
 # Conclusion
