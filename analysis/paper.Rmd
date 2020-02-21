@@ -50,47 +50,46 @@ gini <-  read.csv("../data/Gini_families.csv") %>%
   select(year = Year, gini = Total)
 
 # ==== Clean data
-# Subset the GSS data to just the relevant fields
-gss <- gss_all %>%
+# Subset the GSS data to just the relevant fields for the relevant time frame, join, and recode the same way the 
+  # original study does
+study_data <- gss_all  %>%
   select(year, happy, race, marital) %>%
-  mutate(year = as.integer(year), # fix data class
-         happy = as.integer(happy),
-         happy = recode(happy, `1`= 3, `2` = 2, `3` = 1), # reverse the values such that higher is more happy
-         race = as.integer(race),
-         marital = as.integer(marital)) %>%
-  na.omit() # remove NAs (4780/64,814 cases where not all data was collected)
-  
-# join the gini and happiness/race/marital data
-happy <- gini %>%
-  left_join(gss, by = c("year" = "year")) %>%
-  na.omit()
+  filter(year <= 2012) %>%
+  mutate(year = as.integer(year),
+         happy = dplyr::recode(happy, `1`= 3L, `2` = 2L, `3` = 1L)) %>% #recode to increasing happiness from 1 to 3
+  left_join(gini, by = c("year" = "year"))
 
+# Relabel the labels attribute to reflect the inverse of the happiness intensity (not actually used, but prolly good)
+attributes(study_data$happy)$labels <- c("NOT TOO HAPPY" = 1, "PRETTY HAPPY" = 2, "VERY HAPPY" = 3)
 
-# create summary table by year
-happy_race_summary <- happy %>%
+# Create summary table of mean happiness by year by race
+race_summary <- study_data %>%
   group_by(year, race) %>%
-  summarize(happy_avg = mean(happy))
+  dplyr::summarize(happy_avg = mean(na.omit(happy))) # we can remove the 'dplyr' once we only have the tidyverse loaded
 
 # write a function 
 
 ```
 
 ```{r plots}
-g <- ggplot(happy_race_summary, aes(x = year, y = happy_avg, color = factor(race)))
-g + geom_point() +
+
+# Fig 3 reproduction
+g <- ggplot(race_summary, aes(x = year, y = happy_avg, color = factor(race)))
+g + geom_point(size = .6) +
   geom_line(stat = "smooth",
             method = "lm", 
             se = FALSE, 
             alpha = 0.5) +
   theme_bw() +
-  labs(title = "Figure 3",
+  labs(title = "Average Happiness by Race Trend",
        x = "Year",
        y = "Mean Happiness",
        caption = "Figure 3") +
-  scale_color_discrete(name="Race",
-                      breaks=c(1, 2, 3),
-                      labels=c("White", "Black", "Other")) +
-  scale_y_continuous(limits = c(1.9,2.5))
+  scale_color_manual(values=c("blue", "forestgreen", "dodgerblue"),
+                     name="Race",
+                     breaks=c(1, 2, 3),
+                     labels=c("White", "Black", "Other")) +
+  coord_cartesian(ylim = c(1.9,2.5)) # setting this to match the study excludes the lm via the above methodology
 
 
 ```
