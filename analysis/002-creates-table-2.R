@@ -7,7 +7,7 @@
   library(gssr)
   library(stargazer)
   
-  Gini = read.csv("../data/Gini_families.csv")
+  Gini = read.csv("data/Gini_families.csv")
   data(gss_all)
   happy = gss_all
   happy$Year = happy$year
@@ -44,3 +44,5 @@
 
 # ---- display-table-2
   stargazer(m1,m2,m3,m4,m5,m6)
+
+  
