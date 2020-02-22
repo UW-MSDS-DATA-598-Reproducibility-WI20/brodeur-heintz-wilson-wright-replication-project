@@ -33,7 +33,7 @@ Which is a reference implementation of:
 
 > Oishi, S., Kesebir, S., & Diener, E. (2011). Income Inequality and Happiness. Psychological Science, 22(9), 1095–1100. https://doi.org/10.1177/0956797611417262
 
-There is a crisis of reproducibility and replication in the data science field. In an attempt to bolster confidence in scientific results, the following paper is a replication of "Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)" [@marriagehappiness].  This paper follows the ReScience replication method[@rescience] which strongly encourages open source practices as underlined by the format of this project: a github compendium. This particular replication is unique in that the paper being replicated is an alternate implementation of the paper:"Income Inequality and Happiness" [@incomeinequality]. While the first paper draws a connection between happiness and income, the second calls in the question the data used for this conclusion, and pulls in additional data for analysis. This second analysis, focused on the relationship between marriage and happiness, is the subject of replication in this paper.
+There is a crisis of reproducibility and replication in the data science field. In an attempt to bolster confidence in scientific results, the following paper is a replication of "Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)" [@marriagehappiness].  This paper follows the ReScience replication method[@rescience] which strongly encourages open source practices as underlined by the format of this project: a github compendium. This particular replication is unique in that the paper being replicated is an alternate implementation of the paper:"Income Inequality and Happiness" [@incomeinequality]. While the first paper draws a connection between happiness and income, the second calls into question the data used to obtain the results stated, and pulls in additional data to re-assess the analysis. This second analysis, which focused on the relationship between marriage and happiness, is the subject of replication in this paper.
 
 # Introduction
 
@@ -77,7 +77,7 @@ race_summary <- study_data %>%
 
 The paper of interest[@data] used linear models to show that the correlations drawn by the original findings[@incomeinequality] do not hold once the interactions of variables known to be correlated with the response variables are added to the model.
 
-In this replication paper, three artifacts from the paper[@data] were reproduced. The first artifact, Figure 3., plots the mean happiness by year and race, the second, Table 1, shows the linear regression model's coefficients and the third, Table 2, shows the correlation coefficients of the different independent variables used in the linear models created.
+In this replication paper, three artifacts from [@data] were reproduced. The first artifact, Figure 3., plots the mean happiness by year and race, the second, Table 1, shows the linear regression model's coefficients and the third, Table 2, shows the correlation coefficients of the different independent variables used in the linear models created.
 
 ## Dataset
 
@@ -99,7 +99,7 @@ The original R code used the standard R libraries for visualizations. The ggplot
 knitr::include_graphics("original_paper_table_1.png")
 ```
 
-The R function cor.test() was used to get the Pearson correlation coefficient between the different independent variables (income, age, sex, white, married) and happiness. Grundberg et al.'s code was slightly modified to keep the same encoding of variables given the new dataset input.
+The R function cor.test() was used to get the Pearson correlation coefficient between the different independent variables (income, age, sex, white, married) and the response variable, happiness. Grundberg et al.'s code was slightly modified to keep the same encoding of variables given the new dataset input.
 
 ## Replicating Table 2
 
@@ -107,7 +107,7 @@ The R function cor.test() was used to get the Pearson correlation coefficient be
 knitr::include_graphics("original_paper_table_2.png")
 ```
 
-Grundberg et al used the lme4 package to generate coefficients of linear mixed-effects models using the intercept to capture year as the random effect (see [@lmefour] section 2).
+Grundberg et al used the lme4 package to generate coefficients of linear mixed-effects models using the intercept to capture year as the random effect (see [@lmefour] section 2). 
 
 # Results
 
