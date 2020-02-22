@@ -2,86 +2,70 @@
 # -------------------------------------------------------
 
 # Title of the article:
-#  - For a successful replication, it should be prefixed with "[Re]"
+#  - For a successful replication, it shoudl be prefixed with "[Re]"
 #  - For a failed replication, it should be prefixed with "[¬Re]"
 #  - For other article types, no instruction (but please, not too long)
-title: "[Re]Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)"
+title: "[Re] Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)"
 
 # List of authors with name, orcid number, email and affiliation
 # Affiliation "*" means contact author
 authors:
-  - name: Konrad Hinsen
-    orcid: 0000-0003-0330-9428
-    email: konrad.hinsen@cnrs.fr
-    affiliations: 1,2
+  - name: Lauren Heintz
+    orcid: 0000-0002-2834-2112
+    email: heintzl@uw.edu
+    affiliations: 1
     
-  - name: Nicolas P. Rougier
-    orcid: 0000-0002-6972-589X
-    email: Nicolas.Rougier@inria.fr
-    affiliations: 3,4,5,*      # * is for contact author
+  - name: Will Wright
+    orcid: 0000-0003-1264-4105
+    email: wtwright@uw.edu
+    affiliations: 1 
+
+  - name: Tara Wilson
+    orcid: 0000-0003-3150-3164
+    email: wwtara@uw.edu
+    affiliations: 1  
+
+  - name: Ben Brodeur Mathieu
+  orcid: 0000-0001-6464-9747
+  email: bebrodeu@uw.edu
+  affiliations: 1 
 
 # List of affiliations with code (corresponding to author affiliations), name
 # and address. You can also use these affiliations to add text such as "Equal
 # contributions" as name (with no address).
 affiliations:
   - code:    1
-    name:    Centre de Biophysique Moléculaire, CNRS UPR4301
-    address: Orléans, France
+    name:    University of Washington
+    address: Seattle, Washington, United States
     
-  - code:    2
-    name:    Synchrotron SOLEIL, Division Expériences
-    address: Gif sur Yvette, France
-    
-  - code:    3
-    name:    INRIA Bordeaux Sud-Ouest
-    address: Bordeaux, France
-    
-  - code:    4
-    name:    LaBRI, Université de Bordeaux, Institut Polytechnique de Bordeaux,
-             Centre National de la Recherche Scientifique, UMR 5800
-    address: Talence, France
-    
-  - code:    5
-    name:    Institut des Maladies Neurodégénératives, Université  de Bordeaux,
-             Centre National de la Recherche Scientifique, UMR 5293
-    address: Bordeaux, France
 
 
 # List of keywords (adding the programming language might be a good idea)
-keywords: rescience c, rescience x
+keywords: rescience c, rescience x, R, marriage, happiness
 
 # Code URL and DOI/SWH (url is mandatory for replication, doi after acceptance)
 # You can get a DOI for your code from Zenodo, or an SWH identifier from
 # Software Heritage.
 #   see https://guides.github.com/activities/citable-code/
 code:
-  - url: https://github.com/rescience-c/template
+  - url: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/wilson-heintz-wright-brodeur-replication-project
   - doi: 
   - swh: 
 
 # Data URL and DOI (optional if no data)
 data:
-  - url:
-  - doi:
+  - url: https://doi.org/10.7910/DVN/25655
+  - doi: 10.7910/DVN/25655
 
 # Information about the original article that has been replicated
 replication:
- - cite: # Full textual citation
- - bib:  # Bibtex key (if any) in your bibliography file
- - url:  # URL to the PDF, try to link to a non-paywall version
- - doi:  # Regular digital object identifier
+ - cite: Grunberg, Rebecca L., Hyejun Kim, and Minjae Kim. 2014a. “Marriage and Happiness Grunberg Kim Kim.pdf.” Harvard Dataverse. https://doi.org/10.7910/DVN/25655/MB980L. # Full textual citation
+ - bib: marriagehappiness # Bibtex key (if any) in your bibliography file
+ - url: https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/25655/MB980L# # URL to the PDF, try to link to a non-paywall version
+ - doi: 10.7910/DVN/25655/MB980L # Regular digital object identifier
 
 # Don't forget to surround abstract with double quotes
-abstract: "Three years have passed since ReScience published its first article
-           and since September 2015, things have been going steadily. We're
-           still alive, independent and without a budget. In the meantime, we
-           have published around 20 articles (mostly in computational
-           neuroscience & computational ecology) and the initial has grown
-           from around 10 to roughly 100 members (editors and reviewers), we
-           have advertised ReScience at several conferences worldwide, gave
-           some interviews and we published an article introducing ReScience in
-           PeerJ. Based on our experience at managing the journal during these
-           three years, we think the time is ripe for proposing some changes."
+abstract: "The purpose of the following paper is to do a replication of the paper 'Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)'. There is a crisis of reproducibility and replication in data science field. This paper follows the ReScience method of replicating a research paper to further validate the results of the paper. This particular replication is unique, because the paper being replicated is actually an alternate implementation of another paper, 'Income Inequality and Happiness' [@incomeinequality]. While the first paper draws a connection between happiness and income, the second paper calls in the question the data used for this conclusion, and pulls in additional data for analysis. This second analysis, focused more on marriage and happiness is what this paper seeks to replicate."
 
 # Bibliography file (yours)
 bibliography: bibliography.bib
@@ -95,10 +79,10 @@ type: Editorial
 
 # Scientific domain of the article (e.g. Computational Neuroscience)
 #  (one domain only & try to be not overly specific)
-domain: 
+domain: Pyschological Science
 
 # Coding language (main one only if several)
-language:
+language: R
 
   
 # To be filled by the author(s) after acceptance
