@@ -4,8 +4,8 @@
   require(Matrix)
   require(lme4)
   library(gssr)
-  library(xtable)
-
+  library(kableExtra)
+  
   data(gss_all)
   happy = gss_all
   
@@ -19,7 +19,7 @@
   happy$Married = as.numeric(happy$marital==1)
   
   origData = happy[happy$year<=2008,]
-  
+
 # ---- create-the-correlations-and-table
   income = cor.test(origData$REALINClog, origData$Happiness)
   age = cor.test(origData$Age, origData$Happiness)
@@ -32,6 +32,9 @@
   table1 = as.data.frame(cbind(Estimate,p))
   names(table1)[2] = "p value"
   rownames(table1) = c("Logged Income", "Age", "Sex", "White", "Married")
-  
+
 # ---- display-table-1
-  print(xtable(x=table1), type="html", comment=FALSE)
+  knitr::kable(x=table1, "html", booktabs = TRUE, linesep = "") %>% 
+    kable_styling(full_width = TRUE, font_size = 12) %>% 
+    column_spec(1, width = "4cm") %>% 
+    save_kable(file = "table_1.png")
