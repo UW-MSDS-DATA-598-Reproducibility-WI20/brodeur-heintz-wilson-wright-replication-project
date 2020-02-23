@@ -10,8 +10,6 @@
   happy = gss_all
   
   happy$Happiness = recode(happy$happy, "1=3; 3=1; c(0,8,9)=NA")
-  happy$TRUSTrecode = recode(happy$trust, "1=3; 2=1; 3=2; c(0,8,9)=NA")
-  happy$FAIRrecode = recode(happy$fair, "2=3; 3=2; c(0,8,9)=NA")
   happy$Age = recode(happy$age, "c(9)=NA")
   happy$REALINCrecode = recode(happy$realinc, "0=NA")
   happy$REALINClog = log(happy$REALINCrecode)
