@@ -33,6 +33,6 @@
 
 # ---- display-table-1
   knitr::kable(x=table1, "html", booktabs = TRUE, linesep = "") %>% 
-    kable_styling(full_width = TRUE, font_size = 12) %>% 
+    kable_styling(full_width = FALSE, font_size = 12) %>% 
     column_spec(1, width = "4cm") %>% 
     save_kable(file = "table_1.png")
