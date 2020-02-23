@@ -33,11 +33,7 @@ Which is a reference implementation of:
 
 > Oishi, S., Kesebir, S., & Diener, E. (2011). Income Inequality and Happiness. Psychological Science, 22(9), 1095–1100. https://doi.org/10.1177/0956797611417262
 
-There is a crisis of reproducibility and replication in the data science field. In an attempt to bolster confidence in scientific results, the following paper is a replication of "Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)" [@marriagehappiness].  This paper follows the ReScience replication method[@rescience] which strongly encourages open source practices as underlined by the format of this project: a github compendium. This particular replication is unique in that the paper being replicated is an alternate implementation of the paper:"Income Inequality and Happiness" [@incomeinequality]. While the first paper draws a connection between happiness and income, the second calls into question the data used to obtain the results stated, and pulls in additional data to re-assess the analysis. This second analysis, which focused on the relationship between marriage and happiness, is the subject of replication in this paper.
-
 # Introduction
-
-
 
 ```{r get_data, echo = FALSE}
 # ==== Get Data
@@ -71,6 +67,8 @@ race_summary <- study_data %>%
 
 ```
 
+There is a crisis of reproducibility and replication in the data science field. In an attempt to bolster confidence in scientific results, the following paper is a replication of "Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)" [@marriagehappiness].  This paper follows the ReScience replication method[@rescience] which strongly encourages open source practices as underlined by the format of this project: a github compendium. This particular replication is unique in that the paper being replicated is an alternate implementation of the paper:"Income Inequality and Happiness" [@incomeinequality]. While the first paper draws a connection between happiness and income, the second calls into question the data used to obtain the results stated, and pulls in additional data to re-assess the analysis. This second analysis, which focused on the relationship between marriage and happiness, is the subject of replication in this paper.
+
 # Methods
 
 ## Overview
@@ -83,31 +81,13 @@ In this replication paper, three artifacts from [@data] were reproduced. The fir
 
 Marriage and Happiness[@data], obtained data from the General Social Survey (GSS) and the US Census Bureau. The subset of GSS data provided omitted the RACE and MARITAL columns crucial to the replication of the figures and models. In order to complete the missing data, the original dataset was queried directly using the gssr[@gssr] R package. 
 
-The dataset from gssr contained a larger time interval than the original paper, it was filtered back to match the original intervals. This dataset was also merged with the original US Census Bureau data found in Gini_families.csv[@data] by appending the total column to the GSS data using year as the key. The "happy" variable was re-encoded so that the numerical factor would reflect an increasing level of happiness as per the original code.
+The dataset from gssr contained a larger time interval than the original paper, it was filtered back to match the original intervals. Only years prior to 2008 are used in both analyses. This dataset was also merged with the original US Census Bureau data found in Gini_families.csv[@data] by appending the total column to the GSS data using year as the key. 
 
-## Replicating Figure 3
+Several encodings for the data were updated in the original paper which were replicated in order to allow accurate comparisons. The "happy" variable was re-encoded in a reversed scheme so that the numerical factor would reflect an increasing level of happiness. The income data was re-encoded on a log scale. Race was encoded numerically where "White" was set to 1. The "married" variable was also set to numeric encodings with married respondents denoted by those answering 1.
 
-```{r, figure3, fig.cap="Figure 3 from the original paper", echo=FALSE}
-knitr::include_graphics("original_paper_figure_3.png")
-```
+## Alterations
 
-The original R code used the standard R libraries for visualizations. The ggplot2 package was leveraged to replicate the figure with the new dataset. Axis labels, lines and colors were adjusted to match the original output.
-
-## Replicating Table 1
-
-```{r, table1, fig.cap="Table 1 from the original paper", echo=FALSE}
-knitr::include_graphics("original_paper_table_1.png")
-```
-
-The R function cor.test() was used to get the Pearson correlation coefficient between the different independent variables (income, age, sex, white, married) and the response variable, happiness. Grundberg et al.'s code was slightly modified to keep the same encoding of variables given the new dataset input.
-
-## Replicating Table 2
-
-```{r, table2, fig.cap="Table 2 from the original paper", echo=FALSE}
-knitr::include_graphics("original_paper_table_2.png")
-```
-
-Grundberg et al used the lme4 package to generate coefficients of linear mixed-effects models using the intercept to capture year as the random effect (see [@lmefour] section 2). 
+Aside from gathering the input data from a new source, several different packages were used in addition to ensure the reproduced results were adequately tested. These will be discussed further in the respective sections below.
 
 # Results
 
@@ -131,6 +111,28 @@ g + geom_point(size = .6) +
   coord_cartesian(ylim = c(1.9,2.5)) # setting this to match the study excludes the lm via the above methodology
 ```
 
+
+## Replicating Figure 3
+
+Figure 3 in the original publication plots mean happiness of respondentsover time. This data is categorized into 3 groups by racial identity: White, Black and Other. Best-fitting regression lines are included to display the trend of mean happiness for the 3 populations.
+
+```{r, figure3, fig.cap="Figure 3 from the original paper", echo=FALSE}
+knitr::include_graphics("original_paper_figure_3.png")
+```
+
+The original R code used the standard R libraries for visualizations. The ggplot2 package was leveraged to replicate the figure with the new dataset. Axis labels, lines and colors were adjusted to match the original output.
+
+
+## Replicating Table 1
+
+Table 1 in the original publication explores the correlations between happiness and various control variables found in the dataset.
+
+```{r, table1, fig.cap="Table 1 from the original paper", echo=FALSE}
+knitr::include_graphics("original_paper_table_1.png")
+```
+
+The R function cor.test() was used to get the Pearson correlation coefficient between the different independent variables (income on a log scale, age, sex, white, married) and the response variable, happiness. Grundberg et al.'s code was slightly modified to keep the same encoding of variables given the new dataset input. 
+
 ```{r import-and-clean-the-data-for-table-1, eval=TRUE}
 ```
 
@@ -140,8 +142,25 @@ g + geom_point(size = .6) +
 ```{r display-table-1, eval=TRUE, results='asis'}
 ```
 
-The  to almost exactly reproduce the results from Table 1 in the original paper that shown in Figure \@ref(fig:table1). The only difference is the estimate for Sex was 0.01 in the publication compared to 0.00 in our replication. This may be due to rounding versions or an underlying exclusion of outliers we saw with the above plot.
 
+```{r, table1-replication, fig.cap="Replication of Table 1", echo=FALSE}
+knitr::include_graphics("table_1.png")
+```
+
+We were able to almost exactly reproduce the results from Table 1 in the original paper that shown in Figure \@ref(fig:table1). The only difference is the estimate for Sex was 0.01 in the publication compared to 0.00 in our replication. This may be due to rounding versions or an underlying exclusion of outliers we saw with the above plot.
+
+The steps taken to reproduce this table are identical to those in the original publication aside from a new input dataset and the use of a combination of the kableExtra and xtable R packages to produce the output compared with xtable alone used in the original publication.
+
+
+## Replicating Table 2
+
+Table 2 in the original publication explores the output of various linear models on the dependent variable, happiness. This is central to the message of the paper and was therefore critical to investigate.
+
+```{r, table2, fig.cap="Table 2 from the original paper", echo=FALSE}
+knitr::include_graphics("original_paper_table_2.png")
+```
+
+Grundberg et al used the lme4 package to generate coefficients of linear mixed-effects models using the intercept to capture year as the random effect (see [@lmefour] section 2). 
 
 ```{r import-and-clean-the-data-for-table-2, eval=TRUE}
 ```
@@ -152,12 +171,19 @@ The  to almost exactly reproduce the results from Table 1 in the original paper 
 ```{r display-table-2, eval=TRUE, results='asis'}
 ```
 
-Again we were able to almost identically reproduce the results from Table 2 in the original paper, shown in Figure \@ref(fig:table2). Aside from slight variability in the second and third decimal places, our results from the linear models are very close. There are several differences wit the number of observations, listed in the bottom of the table, which is to be expected as we are using a package with the GSS data and it is likely not an identical snapshot to the one used in the original paper. Overall though these two tables were indeed highly reproducible even with different input data.
+```{r, table2-replication, fig.cap="Replication of Table 2", echo=FALSE}
+knitr::include_graphics("table_2.png")
+```
 
+Again we were able to almost identically reproduce the results from Table 2 in the original paper, shown in Figure \@ref(fig:table2). Aside from slight variability in the second and third decimal places, our results from the linear models are very close. There are several differences with the number of observations, listed in the bottom of the table, which is to be expected as we are using a package with the GSS data and it is likely not an identical snapshot to the one used in the original paper. However, this variability is minor in scale.Even though slight variabilities were observed in different cells throughout this table, no disparities were large enough to impact the significance of the results as denoted in the tables with asterisks. Therefore, even with new data sources we found that the conclusions hold for the linear model analysis. 
+
+Again, the steps taken to reproduce this table were nearly identical as the original paper aside from a new dataset source and the use of the kable and stargazer packages to produce the output as opposed to strictly stargazer LaTeX table results. 
 
 # Conclusion
 
-Replication of this paper was ultimately contingent on tracing back the original dataset. Without this resource being cited and publicly available, it would not have been possible to replicate the different tables and figure presented in the original paper.
+Replication of this paper was ultimately contingent on tracing back the original dataset. Without this resource being cited and publicly available, it would not have been possible to replicate the different tables and figure presented in the original paper. The lack of necessary information included in the published data provided for replication is something that should likely be addressed by the authors as this was a major deterrent to the goal of reproducibility.  
+
+Under conditions of both a new source dataset and different R packages used for data manipulation and visualization, the 3 exhibits in the original publication were able to be replicated. With only minor discrepancies in the numbers themselves, the conclusions drawn from the paper's graphics were not significantly altered by any means. Successful replication of this paper is largely a result of transparency in the original publication providing clarity around data encoding and the models used for analysis. This provided a platform upon which we were able to adapt the code and generate results that in large part align directly with those in the publication. 
 
 # References Cited
 
