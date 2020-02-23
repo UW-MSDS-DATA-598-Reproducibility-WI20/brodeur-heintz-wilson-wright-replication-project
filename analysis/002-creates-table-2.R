@@ -6,6 +6,7 @@
   library(xtable)
   library(gssr)
   library(stargazer)
+  library(kableExtra)
   
   Gini = read.csv("../data/Gini_families.csv")
   data(gss_all)
@@ -43,6 +44,11 @@
   m6.ci = confint(m6)
 
 # ---- display-table-2
-  stargazer(m1,m2,m3,m4,m5,m6)
+  output <- stargazer(m1,m2,m3,m4,m5,m6, type="text")
+  
+  knitr::kable(x=output, "html", booktabs = TRUE, linesep = "&&") %>% 
+    kable_styling(full_width = FALSE, font_size = 12) %>% 
+    column_spec(1, width = "4cm") %>% 
+    save_kable(file = "table_2.png")
 
   
