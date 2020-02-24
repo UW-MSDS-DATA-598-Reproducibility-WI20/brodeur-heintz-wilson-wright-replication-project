@@ -73,7 +73,45 @@ race_summary <- study_data %>%
   group_by(year, race) %>%
   dplyr::summarize(happy_avg = mean(na.omit(happy))) # we can remove the 'dplyr' once we only have the tidyverse loaded
 
-# write a function
+# Function to demonstrate that we can write a function.  In this case, this function creates a neat ggplot based on
+  # input for the data, x and y axes, factor, title, and x and y labels
+study_plotter <- function(plot_data, x_input, y_input, factor_input,
+                          factor_title_input = factor_input,
+                          factor_labs_input = NULL,
+                          title_input = paste0("Plot of ", x_input, " by ", y_input), 
+                          xlab_input = x_input, 
+                          ylab_input = y_input,
+                          caption_input = NULL,
+                          ylim_input){
+  
+  # Evaluate the combination of the data and the x_input, y_input, and factor_input (allows for dynamic plotting)
+  x_input_eval <- eval(parse(text = paste0(plot_data, "$", x_input)))
+  y_input_eval <- eval(parse(text = paste0(plot_data, "$", y_input)))
+  factor_input_eval <- eval(parse(text = paste0(plot_data, "$", factor_input)))
+  
+  # Set plot params
+  g <- ggplot(eval(as.name(plot_data)), aes(x = x_input_eval, y = y_input_eval, color = factor(factor_input_eval)))
+  
+  # add plot elements and plot
+  g + geom_point(size = .6) +
+    geom_line(stat = "smooth",
+              method = "lm", 
+              se = FALSE, 
+              alpha = 0.5) +
+    theme_bw() +
+    labs(title = title_input,
+         x = xlab_input,
+         y = ylab_input,
+         caption = caption_input) +
+    scale_color_manual(values=c("blue", "forestgreen", "dodgerblue"),
+                       name=factor_title_input,
+                       breaks=c(1, 2, 3),
+                       labels=factor_labs_input) +
+    coord_cartesian(ylim = ylim_input) # setting this to match the study excludes the lm via the above methodology
+}
+
+
+
 
 ```
 
@@ -101,22 +139,19 @@ Aside from gathering the input data from a new source, several different package
 
 ```{r plots}
 # Fig 3 reproduction
-g <- ggplot(race_summary, aes(x = year, y = happy_avg, color = factor(race)))
-g + geom_point(size = .6) +
-  geom_line(stat = "smooth",
-            method = "lm", 
-            se = FALSE, 
-            alpha = 0.5) +
-  theme_bw() +
-  labs(title = "Average Happiness by Race Trend",
-       x = "Year",
-       y = "Mean Happiness",
-       caption = "Figure 3") +
-  scale_color_manual(values=c("blue", "forestgreen", "dodgerblue"),
-                     name="Race",
-                     breaks=c(1, 2, 3),
-                     labels=c("White", "Black", "Other")) +
-  coord_cartesian(ylim = c(1.9,2.5)) # setting this to match the study excludes the lm via the above methodology
+
+study_plotter(plot_data = "race_summary", 
+              x_input = "year", 
+              y_input = "happy_avg", 
+              factor_input = "race",
+              factor_title_input = "Race",
+              factor_labs_input = c("White", "Black", "Other"),
+              title_input = "Trend of Average Happiness in the US by Race",
+              xlab_input = "Year",
+              ylab_input = "Mean Happiness",
+              caption_input = "Figure 3",
+              ylim_input = c(1.9,2.5))
+
 ```
 
 ## Replicating Figure 3
