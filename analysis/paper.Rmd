@@ -33,7 +33,15 @@ Which is a reference implementation of:
 
 > Oishi, S., Kesebir, S., & Diener, E. (2011). Income Inequality and Happiness. Psychological Science, 22(9), 1095–1100. https://doi.org/10.1177/0956797611417262
 
+The purpose of the following paper is to do a replication of the paper "Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)" [@marriagehappiness]. There is a crisis of reproducibility and replication in data science field. This paper follows the ReScience method of replicating a research paper to further validate the results of the paper. This particular replication is unique, because the paper being replicated is actually an alternate implementation of another paper, "Income Inequality and Happiness" [@incomeinequality]. While the first paper draws a connection between happiness and income, the second paper calls in the question the data used for this conclusion, and pulls in additional data for analysis. This second analysis, focused more on marriage and happiness is what this paper seeks to replicate.
+
 # Introduction
+
+In the spirit of reproducible science, the team has set out to replicate the paper "Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)" [@marriagehappiness] according to the ReScience standards. ReScience defines replication as "a scientific study (computational or other) means repeating a published protocol, respecting its spirit and intentions but varying the technical details. For computational work, this would mean using different software, running a simulation from different initial conditions, etc. The idea is to change something that everyone believes shouldn’t matter, and see if the scientific conclusions are affected or not" [@rescience].
+
+This replication is unique because it is actually a replication of a replication. The first paper, "Income Inequality and Happiness" [@incomeinequality], is a study on happiness and it specifically focuses on income equality. The study makes the conclusion that in years where there is greater income inqueality in America, people are less happy. The paper attributes this negative relationship to meta variables such as perceived trust and perceived fairness in society. The second paper [@marriagehappiness] calls in to question the data and the conclusions used by this study. The second paper seeks to do a replication but factor in additionaal data like race, gender, and marriage to test for possible confounding variables. Most noteably, a relationship between someone marital status (single vs married) ends up being the only significant factor in a linear regression using all variables. In essence, the second paper makes the claim that when controlling for marriage, there is no relationship between income inequality and happiness of Americans - contradicting the first paper.
+
+This paper will now be a third replication, focused on critiquing the methods and traceability of the second paper. Throughout the analysis, there are some critical pieces of missing data which led to challenges in even reproducing the results. In the effort to reproduce the results, we had to find our own data and sources to tie in for the analysis, making this paper a replication after all.
 
 ```{r get_data, echo = FALSE}
 # ==== Get Data
@@ -66,8 +74,6 @@ race_summary <- study_data %>%
 # write a function
 
 ```
-
-There is a crisis of reproducibility and replication in the data science field. In an attempt to bolster confidence in scientific results, the following paper is a replication of "Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)" [@marriagehappiness].  This paper follows the ReScience replication method[@rescience] which strongly encourages open source practices as underlined by the format of this project: a github compendium. This particular replication is unique in that the paper being replicated is an alternate implementation of the paper:"Income Inequality and Happiness" [@incomeinequality]. While the first paper draws a connection between happiness and income, the second calls into question the data used to obtain the results stated, and pulls in additional data to re-assess the analysis. This second analysis, which focused on the relationship between marriage and happiness, is the subject of replication in this paper.
 
 # Methods
 
