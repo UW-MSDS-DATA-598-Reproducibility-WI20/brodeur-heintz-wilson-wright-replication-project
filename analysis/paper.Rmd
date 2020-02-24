@@ -75,13 +75,13 @@ There is a crisis of reproducibility and replication in the data science field. 
 
 The paper of interest[@data] used linear models to show that the correlations drawn by the original findings[@incomeinequality] do not hold once the interactions of variables known to be correlated with the response variables are added to the model.
 
-In this replication paper, three artifacts from [@data] were reproduced. The first artifact, Figure 3., plots the mean happiness by year and race, the second, Table 1, shows the linear regression model's coefficients and the third, Table 2, shows the correlation coefficients of the different independent variables used in the linear models created.
+In this replication paper, three artifacts from [@data] were reproduced. The first artifact, Figure 3., plots the mean happiness by year and race, the second, Table 1, shows the linear regression model's coefficients and the third, Table 2, shows the correlation coefficients of the different independent variables used in the linear mixed-effect models created.
 
 ## Dataset
 
 Marriage and Happiness[@data], obtained data from the General Social Survey (GSS) and the US Census Bureau. The subset of GSS data provided omitted the RACE and MARITAL columns crucial to the replication of the figures and models. In order to complete the missing data, the original dataset was queried directly using the gssr[@gssr] R package. 
 
-The dataset from gssr contained a larger time interval than the original paper, it was filtered back to match the original intervals. Only years prior to 2008 are used in both analyses. This dataset was also merged with the original US Census Bureau data found in Gini_families.csv[@data] by appending the total column to the GSS data using year as the key. 
+The dataset from gssr contained a larger time interval than the original paper. It was filtered back to match the original interval. Only years prior to 2008 are used in both analyses. This dataset was also merged with the original US Census Bureau data found in Gini_families.csv[@data] by appending the "total" column to the GSS data using "year" as the join key. 
 
 Several encodings for the data were updated in the original paper which were replicated in order to allow accurate comparisons. The "happy" variable was re-encoded in a reversed scheme so that the numerical factor would reflect an increasing level of happiness. The income data was re-encoded on a log scale. Race was encoded numerically where "White" was set to 1. The "married" variable was also set to numeric encodings with married respondents denoted by those answering 1.
 
@@ -111,17 +111,15 @@ g + geom_point(size = .6) +
   coord_cartesian(ylim = c(1.9,2.5)) # setting this to match the study excludes the lm via the above methodology
 ```
 
-
 ## Replicating Figure 3
 
-Figure 3 in the original publication plots mean happiness of respondentsover time. This data is categorized into 3 groups by racial identity: White, Black and Other. Best-fitting regression lines are included to display the trend of mean happiness for the 3 populations.
+Figure 3 in the original publication plots mean happiness of respondents over time. This data is categorized into 3 groups by racial identity: White, Black and Other. Best-fitting regression lines are included to display the trend of mean happiness for the 3 populations.
 
 ```{r, figure3, fig.cap="Figure 3 from the original paper", echo=FALSE}
 knitr::include_graphics("original_paper_figure_3.png")
 ```
 
 The original R code used the standard R libraries for visualizations. The ggplot2 package was leveraged to replicate the figure with the new dataset. Axis labels, lines and colors were adjusted to match the original output.
-
 
 ## Replicating Table 1
 
