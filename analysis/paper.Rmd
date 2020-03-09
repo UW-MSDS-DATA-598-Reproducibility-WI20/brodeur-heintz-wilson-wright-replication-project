@@ -2,7 +2,7 @@
 title: "[Re] Marriage and happiness: Providing evidence against a relationship between inequality and happiness in Oishi, Kesebir, and Diener (2011)"
 author: "Lauren Heintz, Tara Wilson, Ben Mathieu, Will Wright"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: bookdown::word_document2
+output: pdf_document
 bibliography: bibliography.bibtex
 link-citations: yes
 
@@ -184,13 +184,9 @@ The R function cor.test() was used to get the Pearson correlation coefficient be
 ```
 
 
-```{r, table1-replication, fig.cap="Replication of Table 1", echo=FALSE}
-knitr::include_graphics("table_1.png")
-```
-
 We were able to almost exactly reproduce the results from Table 1 in the original paper as shown in Figure \@ref(fig:table1). The only difference being that the estimate for Sex was 0.01 in the publication compared to 0.00 in our replication. This may be due to rounding versions or an underlying exclusion of outliers we saw with the above plot.
 
-The steps taken to reproduce this table are identical to those in the original publication aside from a new input dataset and the use of a combination of the kableExtra and xtable R packages to produce the output compared with xtable alone used in the original publication.
+The steps taken to reproduce this table are nearly identical to those in the original publication aside from a new input dataset. 
 
 
 ## Replicating Table 2
@@ -210,10 +206,6 @@ Grundberg et al used the lme4 package to generate coefficients of linear mixed-e
 ```
 
 ```{r display-table-2, eval=TRUE, results='asis'}
-```
-
-```{r, table2-replication, fig.cap="Replication of Table 2", echo=FALSE}
-knitr::include_graphics("table_2.png")
 ```
 
 Again we were able to almost identically reproduce the results from Table 2 in the original paper, shown in Figure \@ref(fig:table2). Aside from slight variability in the second and third decimal places, our results from the linear models are very close. There are several differences with the number of observations, listed in the bottom of the table, which is to be expected as we are using a package with the GSS data and it is likely not an identical snapshot to the one used in the original paper. However, this variability is minor in scale. Even though slight variabilities were observed in different cells throughout this table, no disparities were large enough to impact the significance of the results as denoted in the tables with asterisks. Therefore, even with new data sources we found that the conclusions hold for the linear model analysis.
