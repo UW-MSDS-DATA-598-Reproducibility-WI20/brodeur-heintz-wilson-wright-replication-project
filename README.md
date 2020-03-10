@@ -76,4 +76,4 @@ Contibution guidelines can be found [here.](CONTRIBUTING.md) Additional Code of 
 
 ## Citations
 
-A citation for this work available on OSF: DOI 10.17605/OSF.IO/RMZTJ
+A citation for this work available on OSF: [DOI 10.17605/OSF.IO/RMZTJ](https://doi.org/10.17605/OSF.IO/RMZTJ)
