@@ -74,6 +74,6 @@ We welcome contributions from everyone. Before you get started, please see our c
 
 Contibution guidelines can be found [here.](CONTRIBUTING.md) Additional Code of Conduct information can be found [here.](CODE_OF_CONDUCT.md)
 
-## [Citations]
+## Citations
 
 A citation for this work available on OSF: DOI 10.17605/OSF.IO/RMZTJ
