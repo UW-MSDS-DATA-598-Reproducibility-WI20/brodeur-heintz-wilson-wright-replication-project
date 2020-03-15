@@ -4,6 +4,7 @@
 [![Build Docker Container](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/workflows/Build-Docker-Container/badge.svg)](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/actions)
 [![R build status](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/workflows/R-CMD-check/badge.svg)](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/actions)
 [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/master?urlpath=rstudio)
+[![DOI](https://img.shields.io/badge/OSF-DOI%3A%2010.17605%2FOSF.IO%2FRX9SQ-brightgreen)](https://doi.org/10.17605/OSF.IO/RX9SQ)
 <!-- badges: end -->
 
 
