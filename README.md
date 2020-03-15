@@ -13,7 +13,7 @@
 
 ## Contributors
 
-[Ben Brodeur Mathieu](https://github.com/ALotOfData) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-6464-9747) 
+[Ben Brodeur Mathieu](https://github.com/ALotOfData) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-6464-9747)  
 [Lauren Heintz](https://github.com/lheintz) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-2834-2112)   
 [Tara Wilson](https://github.com/TaraWilson17) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3150-3164)  
 [Will Wright](https://github.com/WrightWillT) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-1264-4105)  
