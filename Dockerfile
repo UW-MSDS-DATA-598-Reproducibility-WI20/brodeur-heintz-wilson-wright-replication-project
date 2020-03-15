@@ -14,4 +14,4 @@ RUN . /etc/environment \
   # build this compendium package
   && R -e "devtools::install('/reScienceMarriageAndHappinessPkg', dep=TRUE)" \
   # run check on project
-  && R -e "devtools::check('/reScienceMarriageAndHappinessPkg/analysis/paper.Rmd')"
+  && R -e "rmarkdown::render('/reScienceMarriageAndHappinessPkg/analysis/paper.Rmd')"
