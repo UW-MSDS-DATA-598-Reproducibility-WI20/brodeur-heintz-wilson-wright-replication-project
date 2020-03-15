@@ -5,7 +5,6 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 bibliography: bibliography.bibtex
 link-citations: yes
-
 ---
 
 ``` {r setup, echo = FALSE, message = FALSE, warnings = FALSE}
@@ -52,7 +51,7 @@ This paper will now be a second replication, focused on critiquing the methods a
 data(gss_all)
 
 # The Gini indices come from the provided dataset
-gini <-  read.csv("../data/Gini_families.csv") %>%
+gini <-  read.csv("data/Gini_families.csv") %>%
   select(year = Year, gini = Total)
 
 # ==== Clean data
@@ -158,7 +157,7 @@ study_plotter(plot_data = "race_summary",
 
 Figure 3 in the original publication plots mean happiness of respondents over time. This data is categorized into 3 groups by racial identity: White, Black and Other. Best-fitting regression lines are included to display the trend of mean happiness for the 3 populations.
 
-```{r, figure3, fig.cap="Figure 3 from the original paper", echo=FALSE}
+```{r, figure3, fig.cap="Figure 3 from the original paper", out.width="400px", echo=FALSE}
 knitr::include_graphics("original_paper_figure_3.png")
 ```
 

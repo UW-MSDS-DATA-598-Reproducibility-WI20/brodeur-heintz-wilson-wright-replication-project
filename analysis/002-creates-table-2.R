@@ -7,7 +7,7 @@
   library(gssr)
   library(stargazer)
 
-  Gini = read.csv("../data/Gini_families.csv")
+  Gini = read.csv("data/Gini_families.csv")
   data(gss_all)
   happy = gss_all
   happy$Year = happy$year
