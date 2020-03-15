@@ -7,8 +7,8 @@ Authors@R: c(person("Benjamin", "Brodeur Mathieu", email="bebrodeu@uw.edu", role
     person("Tara", "Wilson", email="wwtara@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3150-3164")),
     person("Will", "Wright", email="wtwright@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1264-4105")))
 Maintainer: The package maintainer <bebrodeu@uw.edu>
-Description: REplication of Marriage and happiness project comepndium for our final project for Data 598 A 
-    at the University of Washington, Winter 2020.
+Description: Replication of Marriage and happiness project compendium for our final project for Data 598 A 
+    at the University of Washington, Winter 2020. Includes all data and code necessary to generate replication.
 License: MIT + file LICENSE
 URL: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project
 BugReports: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/issues
