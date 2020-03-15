@@ -107,4 +107,5 @@ Imports:
     xtable (>= 1.8-4),
     yaml (>= 2.2.1),
     zip (>= 2.0.4)
+Remotes: kjhealy/gssr@d70b1ca
 RoxygenNote: 7.0.2
