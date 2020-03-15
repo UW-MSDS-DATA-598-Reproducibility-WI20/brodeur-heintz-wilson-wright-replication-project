@@ -7,10 +7,11 @@ Authors@R: c(person("Benjamin", "Brodeur Mathieu", email="bebrodeu@uw.edu", role
     person("Tara", "Wilson", email="wwtara@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3150-3164")),
     person("Will", "Wright", email="wtwright@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1264-4105")))
 Maintainer: The package maintainer <bebrodeu@uw.edu>
-Description: In class activity for week 7 of the replication class in the data science master's at UW.
+Description: REplication of Marriage and happiness project comepndium for our final project for Data 598 A 
+    at the University of Washington, Winter 2020.
 License: MIT + file LICENSE
-URL: https://github.com/ALotOfData/DATA-598-WI20-week-7
-BugReports: https://github.com/ALotOfData/DATA-598-WI20-week-7/issues
+URL: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project
+BugReports: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/issues
 Encoding: UTF-8
 LazyData: true
 Depends: 
