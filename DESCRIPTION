@@ -2,7 +2,10 @@ Package: reScienceMarriageAndHappinessPkg
 Type: Package
 Title: Replication of Marriage and happiness: Providing evidence against a relationship between inequality and happiness
 Version: 0.1.0
-Authors@R: person("Benjamin", "Brodeur Mathieu", email="bebrodeu@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6464-9747"))
+Authors@R: c(person("Benjamin", "Brodeur Mathieu", email="bebrodeu@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6464-9747")),
+    person("Lauren", "Heintz", email="heintzl@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-2834-2112")),
+    person("Tara", "Wilson", email="wwtara@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3150-3164")),
+    person("Will", "Wright", email="wtwright@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1264-4105")))
 Maintainer: The package maintainer <bebrodeu@uw.edu>
 Description: In class activity for week 7 of the replication class in the data science master's at UW.
 License: MIT + file LICENSE
