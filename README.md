@@ -1,6 +1,7 @@
 # Replication of Marriage and happiness: Providing evidence against a relationship between inequality and happiness
 
 <!-- badges: start -->
+[![Rmd build status](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/workflows/.github/workflows/docker-build.yaml/badge.svg)](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/actions)
 [![R build status](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/workflows/R-CMD-check/badge.svg)](https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/actions)
 [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UW-MSDS-DATA-598-Reproducibility-WI20/brodeur-heintz-wilson-wright-replication-project/master?urlpath=rstudio)
 <!-- badges: end -->
