@@ -12,7 +12,7 @@ jobs:
         run: |
           install.packages(c("remotes", "rcmdcheck", "devtools"))
           remotes::install_deps(dependencies = TRUE)
-          devtools::install('/reScienceMarriageAndHappinessPkg', dep=TRUE)
+          devtools::install('.', dep=TRUE)
         shell: Rscript {0}
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
