@@ -1,10 +1,11 @@
-# Function to demonstrate that we can write a function.  In this case, this function creates a neat ggplot based on
-# input for the data, x and y axes, factor, title, and x and y labels
-#' Title
+#' study_plotter
+#'
+#' In this case, this function creates a neat ggplot based on
+#' input for the data, x and y axes, factor, title, and x and y labels
 #'
 #' @param plot_data data with 3 columns: a dependent, independent, and controlling factor
 #' @param x_input time-series such as year
-#' @param y_input independent var such as % happy
+#' @param y_input independent var such as \% happy
 #' @param factor_input factor to split the y_input such as race
 #' @param factor_title_input label for the factor title
 #' @param factor_labs_input labels for factors
@@ -16,8 +17,6 @@
 #'
 #' @return a plot of the data with a linear regression per factor
 #' @export
-#'
-#' @examples
 study_plotter <- function(plot_data, x_input, y_input, factor_input,
                           factor_title_input = factor_input,
                           factor_labs_input = NULL,
